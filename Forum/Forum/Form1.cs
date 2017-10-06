@@ -20,9 +20,9 @@ namespace Forum
 
         private void start_Click(object sender, EventArgs e)
         {
-            Post newP = new Post(this);
+            Post newP = new Post(this, true);
         }
-        public void newDiscussion(Post curr)
+        public void addDiscussion(Post curr)
         {
             
             discussions.Add(new Discussion(curr));

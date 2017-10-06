@@ -89,6 +89,7 @@
             this.replyButton.TabIndex = 5;
             this.replyButton.Text = "Reply";
             this.replyButton.UseVisualStyleBackColor = true;
+            this.replyButton.Click += new System.EventHandler(this.replyButton_Click);
             // 
             // Post
             // 

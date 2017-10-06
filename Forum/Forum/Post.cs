@@ -12,13 +12,17 @@ namespace Forum
 {
     public partial class Post : Form
     {
-        public Post(Form1 fo)
+        Form1 f;
+        Post previous;
+        List<Post> next;
+        public Post(Form1 fo, bool t)
         {
-            Form1 f = fo;
-            Post previous;
-            List<Post> next;
+            f = fo;
             InitializeComponent();
-            Popup enter = new Popup(this, f);
+            if (t == true)
+            {
+                Popup enter = new Popup(this, f);
+            }
             this.Show();
         }
 
@@ -43,6 +47,11 @@ namespace Forum
             {
                 return false;
             }
+        }
+
+        private void replyButton_Click(object sender, EventArgs e)
+        {
+            Popup newPopup = new Popup(new Post(f, false), f);
         }
     }
 }

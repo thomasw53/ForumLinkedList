@@ -32,7 +32,7 @@ namespace Forum
             origin.setAuthor(authorEntry.Text);
             origin.setMessage(messageEntry.Text);
             this.Hide();
-            f.newDiscussion(origin);
+            f.addDiscussion(origin);
         }
     }
 }
